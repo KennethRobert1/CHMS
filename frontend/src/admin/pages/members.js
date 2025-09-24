@@ -29,7 +29,7 @@ const Members = () => {
 
             ))}
 
-             <NavLink to="/createMember" className="addevent-navlink">
+             <NavLink to="/admin/createMember" className="addevent-navlink">
         <FaPlus className="add-icon" /> Add New Member
       </NavLink>
     

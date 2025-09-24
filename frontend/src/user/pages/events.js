@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import EventsDetails from "./eventsDetails";
 import { useChurchContext } from "../Hooks/useChurchContext";
 
@@ -6,7 +6,8 @@ import { useChurchContext } from "../Hooks/useChurchContext";
 
 
 const Events = () => {
-    const {data, dispatch} = useChurchContext()
+    const {data, dispatch} = useChurchContext();
+
 
 
     useEffect(() => {
@@ -18,6 +19,7 @@ const Events = () => {
                dispatch({type: 'SET_DATA', payload: json})
             }
 
+           
         }
         fetchEvents()
     }, [dispatch])

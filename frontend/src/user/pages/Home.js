@@ -1,11 +1,12 @@
-import Metrics from "../components/metrics";
+import UserMetrics from "../components/userMetrics";
+
 
 
 const Home = () => {
   return ( 
     <div className="home">
       
-      {<Metrics/>}
+      {<UserMetrics/>}
     </div>
    );
 }

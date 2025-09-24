@@ -25,7 +25,7 @@ function AdminApp() {
            
         <Routes>
           <Route exact path="/" element ={<Home/>}/>
-          <Route exact path="/admin/events" element ={<Events/>}/>
+          <Route exact path="/events" element ={<Events/>}/>
           <Route exact path="/members" element ={<Members/>}/>
            <Route exact path="/announcements" element ={<Announcement/>}/>
           <Route exact path="/createEvent" element ={<AddEvent/>}/>

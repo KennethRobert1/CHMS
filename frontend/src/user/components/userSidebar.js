@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { FaBars, FaUser, FaTachometerAlt, FaCalendarAlt, FaBullhorn, FaSignOutAlt } from 'react-icons/fa';
 
 
-const Sidebar = () => {
+const UserSidebar = () => {
   const [isMinimized, setIsMinimized] = useState(false);
 
   const toggleSidebar = () => {
@@ -23,12 +23,12 @@ const Sidebar = () => {
       </div>
 
       <div className="list">
-        <NavLink to="/" exact className="nav-item">
+        <NavLink to="/user" exact className="nav-item">
           <FaTachometerAlt className="icon" />
           {!isMinimized && <span>Dashboard</span>}
         </NavLink>
 
-          <NavLink to="/profile" className="nav-item">
+          <NavLink to="/user/profile" className="nav-item">
           <FaUser className="icon" />
           {!isMinimized && <span>Profile</span>}
         </NavLink>
@@ -59,4 +59,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default UserSidebar;

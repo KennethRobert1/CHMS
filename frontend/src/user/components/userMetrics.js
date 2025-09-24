@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Metrics = () => {
+const UserMetrics = () => {
   const [totalEvents, setTotalEvents] = useState(0);
   const [totalAnnouncements, setTotalAnnouncements] = useState(0);
   const [error, setError] = useState(null);
@@ -44,4 +44,4 @@ const Metrics = () => {
   );
 };
 
-export default Metrics;
+export default UserMetrics;

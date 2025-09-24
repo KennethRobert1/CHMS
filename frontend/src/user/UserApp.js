@@ -2,12 +2,14 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import './App.css';
 
-import Home from './pages/Home';
-import Sidebar from "./components/sidebar";
+
+
 import Events from "./pages/events";
 import Header from "./components/header";
 import Announcement from "./pages/announcement";
 import Requests from "./pages/requests";
+import Home from "./pages/Home";
+import UserSidebar from "./components/userSidebar";
 
 
 
@@ -16,16 +18,16 @@ function UserApp() {
   return (
    
     <div className="App">     
-       {<Sidebar/>}
+       {<UserSidebar/>}
       
       <div className="content">
         {<Header/>}
            
         <Routes>
-          <Route exact path="/user/*" element ={<Home/>}/>
-          <Route exact path="/user/events/*" element ={<Events/>}/>         
-          <Route exact path="/user/announcements/*" element ={<Announcement/>}/>  
-           <Route exact path="/user/requests/*" element ={<Requests/>}/>      
+          <Route path="/" element ={<Home/>}/>
+          <Route path="/events" element ={<Events/>}/>         
+          <Route path="/announcements" element ={<Announcement/>}/>  
+          <Route path="/requests" element ={<Requests/>}/>      
         
         </Routes>    
                  

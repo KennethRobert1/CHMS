@@ -34,7 +34,7 @@ const Announcement = () => {
 
             ))}
 
-            <NavLink to="/createAnnouncement" className="addevent-navlink">
+            <NavLink to="/admin/createAnnouncement" className="addevent-navlink">
                     <FaPlus className="add-icon" /> Add New announcement
                   </NavLink>
 

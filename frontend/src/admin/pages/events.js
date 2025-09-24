@@ -5,8 +5,6 @@ import EventsDetails from "./eventsDetails";
 import { useChurchContext } from "../Hooks/useChurchContext";
 
 
-
-
 const Events = () => {
     const {data, dispatch} = useChurchContext()
 
@@ -30,7 +28,7 @@ const Events = () => {
 
             ))}
 
-             <NavLink to="/createEvent" className="addevent-navlink">
+             <NavLink to="/admin/createEvent" className="addevent-navlink">
         <FaPlus className="add-icon" /> Add New Event
       </NavLink>
     

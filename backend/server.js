@@ -3,6 +3,8 @@ require('dotenv').config()
 const events = require('./routes/eventsRoute')
 const members = require('./routes/memberRoute')
 const announcements = require('./routes/announcementRoute')
+const user = require('./routes/user')
+
 
 // 01: require express
 const express = require('express');
@@ -11,6 +13,7 @@ const cors = require('cors');
 
 // require mongoose
 const mongoose = require('mongoose');
+
 
 // 02: start the express app
 const app = express();
@@ -29,8 +32,11 @@ app.use((req, res, next) => {
 app.use( '/api/v1/events', events)
 app.use( '/api/v1/members', members)
 app.use( '/api/v1/announcements', announcements)
+app.use( '/api/v1/user', user)
 
-// Connect to DataBase
+
+
+// 03 Connect to DataBase
 app.listen(process.env.PORT, () => {
     connectDb()
     console.log('connected to database & listening to port', process.env.PORT); 
